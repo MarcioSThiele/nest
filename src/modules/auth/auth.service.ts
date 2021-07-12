@@ -4,12 +4,14 @@ import { AuthCredentialsDto } from './dto/auth-credentials.dto';
 import { User } from './repository/entity/user.entity';
 import { UserRepository } from './repository/user.repository';
 import * as bcrypt from 'bcrypt';
+import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class AuthService {
   constructor(
     @InjectRepository(UserRepository)
     private userRepository: UserRepository,
+    private jwtService: JwtService,
   ) {}
 
   async signUp(authCredentialsDto: AuthCredentialsDto): Promise<void> {
