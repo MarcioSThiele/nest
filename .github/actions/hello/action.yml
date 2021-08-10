@@ -4,7 +4,7 @@ description: This is my first action
 inputs:
   who-to-greet:
     description: 'Who to greet'
-    required: true
+    required: false
     default: Marcio
 outputs:
   time:
