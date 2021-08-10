@@ -11,7 +11,7 @@ try {
 
   core.setOutput('time', time.toTimeString());
 
-  console.log(github.context.eventName);
+  console.log('TEST -> ' + github.context.eventName);
   console.log(JSON.stringify(github, null, '\t'));
 } catch (error) {
   core.setFailed(error.message);
