@@ -3,12 +3,12 @@ author: Marcio Thiele
 description: This is my first action
 inputs: who
   who-to-greet: 
-    description: "Who to greet"
+    description: 'Who to greet'
     required: true
     default: Marcio
 outputs:
   time:
-    description: "The greeting time"
+    description: 'The greeting time'
 runs:
-  using: "node12"
-  main: "dist/index.js"
+  using: 'node12'
+  main: 'dist/index.js'
